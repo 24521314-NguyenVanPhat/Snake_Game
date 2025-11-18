@@ -66,9 +66,13 @@ int main()
     while (1){
         if (kbhit()){
             t = getch();
+            if (t=='a') Huong = 2;
+            if (t=='w') Huong = 3;
+            if (t=='d') Huong = 0;
             if (t=='x') Huong = 1;
         }
         system("cls");
+        VeKhung();
         r.Ve(Qua);
         r.DiChuyen(Huong,Qua);
         Sleep(300);
